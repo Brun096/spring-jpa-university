@@ -1,0 +1,40 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http:/www.thymeleaf.org">
+
+<head>
+	<div th:replace="fragment-resources :: head"></div>
+	<title>Departments</title>
+</head>
+
+<body>
+	<div class="container-fluid">
+	<h1>Departments</h1>
+	<table>
+		<thead>
+			<tr>
+				<th scope="col" class="col-md-2 table-warning">Name</th >
+				<th scope="col" class="col-md-2 table-warning">Address</th >
+				<th scope="col" class="col-md-2 table-warning">Phone</th >
+				<th scope="col" class="col-md-2 table-warning">Website</th >
+				<th scope="col" class="col-md-2 table-warning">Head</th >
+				
+			</tr>
+		</thead>
+		<tbody>
+			<tr th:each="dep : ${departments}">
+				<td th:text="${dep.name}"></td>
+				<td th:text="${dep.address}"></td>
+				<td th:text="${dep.phone}"></td>
+				<td th:text="${dep.website}"></td>
+				<td th:text="${dep.headOfDepartment}"></td>
+				
+				
+			</tr>
+		</tbody>
+	</table>
+	</div >
+	
+	<div th:replace="fragment-resources :: scripts"></div>
+</body>
+
+</html>
