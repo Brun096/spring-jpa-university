@@ -1,0 +1,20 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http:/www.thymeleaf.org">
+
+<head>
+	<div th:replace="fragment-resources :: head"></div>
+	<title>Degree</title>
+</head>
+
+<body>
+	<h1 th:text="${department.name}"></h1 >
+	
+	<ul th:each="dg : ${department.getDegrees()}">
+	<li th:text="${dg.name}"></il>
+	</ul >
+	
+	
+	<div th:replace="fragment-resources :: scripts"></div>
+</body>
+
+</html>
