@@ -5,14 +5,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
+//import javax.persistence.JoinColumn;
+//import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 @Entity
 @Table(name="degrees")
 
-public class Degrees {
+public class Degree {
 	
 	@Id
 	@Column(name="id")
@@ -24,10 +24,16 @@ public class Degrees {
 	private String email;
 	private String website;
 	
-	@ManyToOne
-	@JoinColumn(name="department_id")
-	private Department department;
-	
+//	@ManyToOne
+//	@JoinColumn(name="department_id")
+//	private Department department;
+//	
+//	public Department getDepartment() {
+//		return department;
+//	}
+//	public void setDepartment(Department department) {
+//		this.department = department;
+//	}
 	public int getId() {
 		return id;
 	}
